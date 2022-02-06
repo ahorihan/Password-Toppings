@@ -1,5 +1,28 @@
 console.log("Extension ready!");
-let passwordBox = document.querySelectorAll('input[type=password]');
+var focusedField = null;
+var enable = 0;
+document.querySelectorAll('input[type=password]').forEach(item => {
+    item.addEventListener('focus', (e) => {
+        console.log("Focused field set");
+        focusedField = item;
+        if(item.value.length > 0){
+            enable = 1;
+        }
+        else{
+            enable = 0;
+        }
+    });
+    item.addEventListener('input', (e) => {
+        console.log("Focused field set");
+        focusedField = item;
+        if(item.value.length > 0){
+            enable = 1;
+        }
+        else{
+            enable = 0;
+        }
+    });
+});
 //const button = document.createElement("button");
 //button.id = "toppings";
 //const url = chrome.extension.getURL("/images/icon.PNG")
@@ -14,39 +37,11 @@ let passwordBox = document.querySelectorAll('input[type=password]');
 //button.style['z-index'] = "-1";
 //button.style.backgroundColor = "#FF00FF";
 
-var focusedField = null;
-var enable = 0;
-
-for (elt of passwordBox) {
-    var parent = elt.parentElement;
-    //parent.style['background-color'] = '#FF00FF';
-    //button.style.width = elt.style.width;
-    //button.style.height = elt.style.width;
-    //button.style['top'] = elt.style.top;
-    //button.style.width = "25px";
-    //button.style.height = "25px";
-    //parent.appendChild(button);
-    elt.addEventListener('input', (e) => {
-        console.log("Focused field set");
-        focusedField = elt;
-        if(elt.value.length > 0){
-            enable = 1;
-        }
-        else{
-            enable = 0;
-        }
-        //let msg = {
-            //txt: enable
-        //}
-        //chrome.runtime.sendMessage(msg);
-    });
-}
-
 //Listen for user to add topping and make sure password has been set
 chrome.runtime.onMessage.addListener(gotMessage);
 
 function gotMessage(message, sender, sendResponse){
-    console.log(message.txt);
+    console.log(focusedField);
     if(focusedField !== null && enable == 1){
         focusedField.value += message.txt;
     }

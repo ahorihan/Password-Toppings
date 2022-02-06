@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     //Add topping to password
     addBtn.onclick = function () {
+        tpgInp.value = ""
         let params = {
             active: true,
             currentWindow: true
