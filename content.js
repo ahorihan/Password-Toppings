@@ -50,6 +50,9 @@ function gotMessage(message, sender, sendResponse){
     if(focusedField !== null && enable == 1){
         focusedField.value += message.txt;
     }
+    else{
+        enable = 0;
+    }
 
     sendResponse(enable);
 }

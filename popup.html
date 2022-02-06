@@ -5,22 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <title>Password Toppings Extension</title>
 </head>
 <body>
-    <div class="container">
-        <h2 class="titleText">Password Toppings</h2>
+    <div class="container" id="container">
+        <div class="headerContainer">
+            <img src="/images/pixel_logo.png" class="image">
+            <h2 class="titleText">Password Toppings</h2>
+            <img src="/images/pixel_logo.png" class="image">
+        </div>
         <hr>
-        <button id="about">About</button>
         <br>
         <label for="toppingInput" id="toppingLabel" class="toppingLabel">Add Topping:</label>
+        <br>
         <br>
         <input id="toppingInput" class = "toppingInput" placeholder = "Type to add topping">
         <button class = "addButton" id="addButton">Add!</button>
         <br>
         <p id="failedInput" class="failedInput">You must enter your password before adding toppings!</p>
         <p id="failedInput2" class="failedInput">You must enter a topping before adding!</p>
+        <p id="failedInput3" class="failedInput">Topping is not in our topping list or was misspelled</p>
         <p id="toppingAdded" class="toppingAdded">Topping Added!</p>
+        <div class="abtContainer">
+            <button class ="about" id="about">About the project</button>
+        </div>
         <ul class="desc" id="desc">
             <li>Create strong, easy-to-remember passwords</li>
             <li>When creating any account, first type in your chosen password</li>
