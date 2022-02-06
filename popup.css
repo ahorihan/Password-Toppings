@@ -1,0 +1,36 @@
+.container{
+    width: 250px;
+    height: 500px;
+}
+
+.titleText{
+    text-align: center;
+}
+
+.desc{
+    display: none;
+}
+
+.toppingInput{
+    height: 50px;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+.addButton{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(100, 206, 255);
+    cursor: pointer;
+    box-shadow: 0px 0px 3px rgb(148, 148, 148);
+}
+
+.failedInput{
+    color: red;
+}
+
+.toppingAdded{
+    color: rgb(0, 255, 0);
+}

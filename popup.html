@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="popup.css">
+    <title>Password Toppings Extension</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="titleText">Password Toppings</h2>
+        <hr>
+        <button id="about">About</button>
+        <br>
+        <label for="toppingInput" id="toppingLabel" class="toppingLabel">Add Topping:</label>
+        <br>
+        <input id="toppingInput" class = "toppingInput" placeholder = "Type to add topping">
+        <button class = "addButton" id="addButton">Add!</button>
+        <br>
+        <p id="failedInput" class="failedInput">You must enter your password before adding toppings!</p>
+        <p id="failedInput2" class="failedInput">You must enter a topping before adding!</p>
+        <p id="toppingAdded" class="toppingAdded">Topping Added!</p>
+        <ul class="desc" id="desc">
+            <li>Create strong, easy-to-remember passwords</li>
+            <li>When creating any account, first type in your chosen password</li>
+            <li>Then click on the add toppings button to increase password security!</li>
+            <li>Toppings can be any combination of food items, where order matters</li>
+            <li>Your toppings will be encrypted and automatically added to the end of your password</li>
+            <li>When creating a password with toppings, you will need to add these topping each time you log in</li>
+            <li>These toppings are not case-sensitive, and we will never store your topping combination!</li>
+            <li>Your password with toppings can be saved normally by your browser</li>
+            <li>Like a normal password, if you forget your toppings, simply click "forgot password" to reset it!</li>
+        </ul>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
